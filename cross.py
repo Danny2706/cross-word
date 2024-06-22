@@ -61,7 +61,10 @@ if __name__ == "__main__":
     crossword.add_word_horizontal("Samuel", 5, 5)
     crossword.add_word_vertical("Samuel", 5, 5)
      crossword.add_word_vertical("Asregide", 6, 7)
- 8crossword.add_word_vertical("Fride", 8, 8)
+ crossword.add_word_vertical("Fride", 8, 8)
+ crossword.add_word_horizontal("Tigist", 5, 5)
+ crossword.add_word_vertical("Software", 6, 5)
+
 
 
     # Display the crossword
