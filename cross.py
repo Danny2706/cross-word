@@ -58,6 +58,8 @@ if __name__ == "__main__":
     crossword.add_word_vertical("grid", 4, 4)
     crossword.add_word_horizontal("Daniel", 3, 3)
     crossword.add_word_vertical("Daniel", 3, 3)
+    crossword.add_word_horizontal("Samuel", 5, 5)
+    crossword.add_word_vertical("Samuel", 5, 5)
 
     # Display the crossword
     crossword.display()
