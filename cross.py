@@ -53,4 +53,11 @@ class CrosswordGame:
         choice = int(input("Enter the number of the clue: ")) - 1
         clue = self.clues[choice]
         answer = input(f"Enter your answer for {clue['direction']} {clue['number']}: ")
-        
+        if answer.upper() == clue["answer"]:
+            print("Correct!")
+            self.player_score += 1
+        else:
+            print("Incorrect. Try again!")
+
+game = CrosswordGame()
+game.play()
