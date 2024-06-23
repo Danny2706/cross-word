@@ -1,4 +1,4 @@
-
+# Crossword Game for Players
 import random
 class CrosswordGame:
     def init(self):
@@ -15,6 +15,7 @@ class CrosswordGame:
                 row.append(chr(ord('A') + random.randint(0, 25)))
             board.append(row)
         return board
+
     def create_clues(self):
         # Create a list of clues for the player to solve
         clues = [
@@ -29,17 +30,27 @@ class CrosswordGame:
         # Print the current state of the board
         for row in self.board:
             print(" ".join(row))
+
     def play(self):
-            # Main game loop
+        # Main game loop
         while True:
             self.print_board()
             print("Score:", self.player_score)
             print("Enter 'solve' to solve a clue, or 'quit' to quit the game.")
+            command = input("> ")
+            if command == "quit":
+                break
+            elif command == "solve":
+                self.solve_clue()
+            else:
+                print("Invalid command. Try again!")
+
     def solve_clue(self):
-            # Ask the player to solve a clue
+        # Ask the player to solve a clue
         print("Choose a clue to solve:")
         for i, clue in enumerate(self.clues):
             print(f"{i+1}. {clue['direction']} {clue['number']}: {clue['clue']}")
         choice = int(input("Enter the number of the clue: ")) - 1
         clue = self.clues[choice]
         answer = input(f"Enter your answer for {clue['direction']} {clue['number']}: ")
+        
