@@ -35,3 +35,11 @@ class CrosswordGame:
             self.print_board()
             print("Score:", self.player_score)
             print("Enter 'solve' to solve a clue, or 'quit' to quit the game.")
+    def solve_clue(self):
+            # Ask the player to solve a clue
+        print("Choose a clue to solve:")
+        for i, clue in enumerate(self.clues):
+            print(f"{i+1}. {clue['direction']} {clue['number']}: {clue['clue']}")
+        choice = int(input("Enter the number of the clue: ")) - 1
+        clue = self.clues[choice]
+        answer = input(f"Enter your answer for {clue['direction']} {clue['number']}: ")
