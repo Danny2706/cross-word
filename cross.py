@@ -29,3 +29,9 @@ class CrosswordGame:
         # Print the current state of the board
         for row in self.board:
             print(" ".join(row))
+    def play(self):
+            # Main game loop
+        while True:
+            self.print_board()
+            print("Score:", self.player_score)
+            print("Enter 'solve' to solve a clue, or 'quit' to quit the game.")
