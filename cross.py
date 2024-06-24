@@ -15,3 +15,17 @@ class CrosswordGame:
                 row.append(chr(ord('A') + random.randint(0, 25)))
             board.append(row)
         return board
+    def create_clues(self):
+        # Create a list of clues for the player to solve
+        clues = [
+            {"direction": "across", "number": 1, "clue": "Flower", "answer": "ROSE"},
+            {"direction": "down", "number": 2, "clue": "Animal", "answer": "CAT"},
+            {"direction": "across", "number": 3, "clue": "City", "answer": "PARIS"},
+           
+        ]
+        return clues
+
+    def print_board(self):
+        # Print the current state of the board
+        for row in self.board:
+            print(" ".join(row))
